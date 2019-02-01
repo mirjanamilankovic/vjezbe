@@ -1,0 +1,123 @@
+.wrapper {
+    max-width: 1000px;
+    margin:0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.products__title::before {
+    content: "";
+    width: 6%;
+    height: 1px;
+    border-bottom: 2px solid grey;
+    position: absolute;
+    bottom:0;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+}
+
+.product:nth-child(4n) {
+    margin-right:0;
+}
+
+.product:nth-child(n+5) {
+    margin-top: 30px;
+}
+
+.product__image {
+    margin:0;
+    position: relative;
+}
+
+.product__image-image {
+    width:100%;
+}
+
+.product__actions {
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+    .product__image:hover .product__actions {
+        opacity: 1;
+        bottom: 70px;
+    }
+
+    .product__action {
+        font-size: 25px;
+        margin-right: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+        .product__action:last-child {
+            margin-right: 0;
+        }
+
+
+.product__label {
+    display: inline-block;
+    position: absolute;
+    top: 24px;
+    left: -23px;
+    padding: 5px 20px;
+    background: #000;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    color: #ffff;
+}
+
+    .product__label--hot {
+        background:yellow;
+        color:red;
+        top: 23px;
+    }
+
+    .product__label--sale {
+        background: red;
+        color:#ffff;
+        top: 27px;
+        left: -27px;
+    }
+
+    .product__label--new {
+        background: #1fcaab;
+        color: #fff;
+    }
+
+.product__meta {
+    margin:10px 0;
+}
+
+.product__subtitle {
+    margin:0;
+    font-size:18px;
+    font-weight: normal;
+    color:grey;
+}
+
+.product__price {
+    margin:0;
+    font-size: 18px;
+    color: #191919;
+}
+
+.products__title {
+    position: relative;
+}
